@@ -1,0 +1,327 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap');
+/* Reset Básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.6;
+    color: #333;
+    overflow-x: hidden; /* Evita rolagem horizontal indesejada */
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* --- Barra de Navegação --- */
+#navbar {
+    background-color: transparent;
+    color: white;
+    padding: 15px 0;
+    position: fixed; /* Fixo no topo */
+    width: 100%;
+    z-index: 100; /* Acima de outros elementos */
+    transition: background-color 0.3s ease, padding 0.3s ease; /* Transição para o efeito de scroll */
+}
+
+#navbar.scrolled { /* Estilo da navbar quando a página é rolada */
+    background-color: #333333; /* Cor mais escura e opaca */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    padding: 10px 0;
+}
+
+#navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 2.2em;
+    color:white;
+    text-decoration: none;
+}
+
+.skills-logo {
+    font-family: "Protest Riot", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2.5em;
+    color: rgb(178, 206, 145);
+    text-decoration: none;
+}
+h1{
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    
+}
+.skills-h1{
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-size: 2,6em;
+    font-weight: 800;
+    color: rgb(178, 206, 145);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 30px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: rgb(178, 206, 145); /* Cor de destaque ao passar o mouse */
+}
+
+/* --- Hero Section --- */
+.hero-section {
+    height: 100vh; /* Ocupa 100% da altura da viewport */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://via.placeholder.com/1500x800/2c3e50/ffffff?text=Fundo+Hero') no-repeat center center/cover;
+    background-attachment: fixed; /* Efeito Parallax */
+    /* Você pode colocar uma imagem real aqui ou usar um vídeo */
+}
+
+.hero-content {
+    max-width: 800px;
+    margin-top: 150px;    
+    padding: 50px;
+}
+
+.hero-content h1 {
+    font-size: 3.5em;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero-content p {
+    font-size: 1.4em;
+    margin-bottom: 40px;
+    opacity: 0.9;
+}
+
+.whatsapp-button {
+    background-color: #30C630;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.whatsapp-button:hover {
+    background-color: #228B22;
+    transform: translateY(-3px);
+}
+
+.btn-primary {
+    background-color: #228B22;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #30C630;
+    transform: translateY(-3px);
+}
+/* --- Seções Gerais --- */
+.section {
+    padding: 80px 0; /* Espaçamento vertical entre as seções */
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    margin-bottom: 20px; /* Espaço entre as seções */
+}
+
+.section:last-of-type {
+    margin-bottom: 0;
+}
+
+.section-title {
+    font-size: 2.5em;
+    margin-bottom: 50px;
+    color: #2c3e50;
+    position: relative; /* Para a linha decorativa */
+    display: inline-block; /* Para a linha ficar abaixo do texto */
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: rgba(44, 62, 80, 0.95);
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+/* --- Seção de Recursos --- */
+.skills-section {
+    background-color: #f8f8f8;
+}
+
+.skills-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.skill-item {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px 13px;
+    border-radius: 8px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+.line-spacing{
+    line-height: 1em;
+}
+.skill-item:hover {
+    background-color: var(--secondary-accent);
+}
+
+.skill-icon {
+    font-size: 3.5em;
+    color: var(--white);
+    margin-bottom: 10px;
+}
+
+.skill-item p {
+    font-size: 1em;
+    color: var(--white);
+    margin-bottom: 0;
+}
+
+/* --- Seção Sobre --- */
+.about-section p {
+    max-width: 800px;
+    margin: 20px auto;
+    font-size: 1.1em;
+    line-height: 1.8;
+}
+
+/* --- Seção de Contato --- */
+.contact-section {
+    background-color: #ecf0f1;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.contact-form textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.contact-form .btn-primary {
+    align-self: center; /* Centraliza o botão dentro do form flex */
+    width: auto; /* Ajusta largura */
+}
+
+/* --- Rodapé --- */
+footer {
+    background-color: #333333;
+    color: white;
+    text-align: center;
+    padding: 30px 0;
+    font-size: 0.9em;
+}
+
+/* --- Animações de Revelação ao Scroll --- */
+.reveal-text, .reveal-item {
+    opacity: 0;
+    transform: translateY(20px); /* Começa 20px abaixo */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.reveal-text.active, .reveal-item.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.5em;
+    }
+
+    .hero-content p {
+        font-size: 1.1em;
+    }
+
+    .nav-links {
+        display: none; /* Esconde links para menu hamburguer (seria JS para isso) */
+    }
+
+    #navbar .container {
+        flex-direction: column;
+    }
+
+    .logo {
+        margin-bottom: 7px;
+    }
+
+    .section-title {
+        font-size: 2em;
+    }
+
+    .skills-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skill-item {
+        width: 33.33%;
+        max-width: 350px;
+    }
+}
